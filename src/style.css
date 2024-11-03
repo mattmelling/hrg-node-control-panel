@@ -1,0 +1,129 @@
+body {
+    background-color: #bbb;
+}
+
+#container {
+    margin: auto;
+    max-width: 900px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 8px;
+
+    background-color: #ffffff;
+    height:85px;
+    border: solid 1px #7E7E7E;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 20%;
+}
+
+#header h1 {
+    font-family: sans;
+}
+
+#header h1 a {
+    text-decoration: none;
+    color: #999;
+}
+
+#header h1 a:visited {
+    color: black;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #aaa;
+
+    row-gap: 16px;
+    column-gap: 16px;
+
+    padding: 8px;
+    padding-bottom: 16px;
+
+    border: solid 1px #7E7E7E;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .buttons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+.button {
+    font-size: 18px;
+    font-family: sans;
+    text-align: center;
+    padding: 15px 25px;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #666;
+    min-height: 60px;
+    max-height: 60px;
+}
+
+.button:active {
+    box-shadow: 0 5px #aaa;
+    transform: translateY(4px);
+}
+
+.button-green {
+    color: #fff;
+    background-color: #4CAF50;
+}
+.button-green:hover { background-color: #3e8e41 }
+.button-green:active { background-color: #3e8e41; }
+
+.button-blue {
+    color: #fff;
+    background-color: #019FE3;
+}
+.button-blue:hover { background-color: #0052cc; }
+.button-blue:active { background-color: #0052cc; }
+
+.button-purple {
+    color: #fff;
+    background-color: #800080;
+}
+.button-purple:hover { background-color: #dda0dd; }
+.button-purple:active { background-color: #dda0dd; }
+
+.button-red {
+    color: #fff;
+    background-color: #ff0000;
+}
+.button-red:hover { background-color: #cc0000; }
+.button-red:active { background-color: #cc0000; }
+
+.button-orange {
+  color: #fff;
+  background-color: #ff9900;
+}
+.button-orange:hover { background-color: #cc7a00; }
+.button-orange:active { background-color: #cc7a00; }
