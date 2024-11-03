@@ -6,7 +6,7 @@ The original idea was implemented by G7RPG. Later, G7HMV and G4IYT used a modifi
 ![Screenshot of GB3VR control panel](./img/screenshot.png)
 
 ## Installation
-Any existing Allstarlink installation that uses Allmon or Supermon should have everything required to use this control panel. Simply put the files inside either the root or a subfolder of:
+Any existing Allstarlink installation that uses Allmon or Supermon should have everything required to use this control panel. Simply put the files from the `src/` folder inside either the root or a subfolder of:
 
 - `/var/www/html` for ASL 2 or 3
 - `/srv/http` for HamVOIP
