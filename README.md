@@ -3,6 +3,8 @@ This is a simple control panel used by a number of [Allstar](https://www.allstar
 
 The original idea was implemented by G7RPG. Later, G7HMV and G4IYT used a modified version for several of the HRG boxes. This version was rewritten from scratch by G4IYT to make it easier to configure as it was deployed to new nodes, and is now in use across a number of nodes in the Herts Repeater Group network.
 
+![Screenshot of GB3VR control panel](./img/screenshot.png)
+
 ## Installation
 Any existing Allstarlink installation that uses Allmon or Supermon should have everything required to use this control panel. Simply put the files inside either the root or a subfolder of:
 
