@@ -13,7 +13,7 @@ sudo apt-get install -y git apache2 libapache2-mod-php
 git clone https://github.com/mattmelling/hrg-node-control-panel/
 sudo cp -Rv hrg-node-control-panel/src/* /var/www/html/
 sudo mv /var/www/html/index.html /var/www/html/index.html.old
-echo -e "www-data ALL=(ALL) NOPASSWD: /usr/sbin/asterisk" | tee -a /etc/sudoers
+echo -e "www-data ALL=(ALL) NOPASSWD: /usr/sbin/asterisk" | sudo tee -a /etc/sudoers
 ```
 
 ## Detailed Install
