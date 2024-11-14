@@ -5,8 +5,19 @@ The original idea was implemented by G7RPG. Later, G7HMV and G4IYT used a modifi
 
 ![Screenshot of GB3VR control panel](./img/screenshot.png)
 
-## Installation
-Any existing Allstarlink installation that uses Allmon or Supermon should have everything required to use this control panel. Simply put the files from the `src/` folder inside either the root or a subfolder of:
+## Quick Install (ASL3)
+SSH in to your node and run these commands line-by-line:
+
+```
+sudo apt-get install -y git apache2 libapache2-mod-php
+git clone https://github.com/mattmelling/hrg-node-control-panel/
+sudo cp -Rv hrg-node-control-panel/src/* /var/www/html/
+sudo mv /var/www/html/index.html /var/www/html/index.html.old
+echo -e "www-data ALL=(ALL) NOPASSWD: /usr/sbin/asterisk" | tee -a /etc/sudoers
+```
+
+## Detailed Install
+Put the files from the `src/` folder inside either the root or a subfolder of:
 
 - `/var/www/html` for ASL 2 or 3
 - `/srv/http` for HamVOIP
