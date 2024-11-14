@@ -13,6 +13,18 @@ Any existing Allstarlink installation that uses Allmon or Supermon should have e
 
 HRG has nodes using this control panel that ASL2, ASL3, as well as HamVOIP, so it should work with whatever version you have.
 
+Install the following packages:
+
+```
+sudo apt-get install -y apache2 libapache2-mod-php
+```
+
+Add this line to `/etc/sudoers` to allow the web server to call the asterisk manager command without requiring a password (try `sudo nano /etc/sudoers` from SSH):
+
+```
+www-data ALL=(ALL) NOPASSWD: /usr/sbin/asterisk
+```
+
 ## Security
 We use a simple `.htaccess` to authenticate users with a simple username and password (easily found if you know what you are looking for), mainly to prevent random drive-by users and bots from clicking the buttons:
 
