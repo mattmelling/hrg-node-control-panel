@@ -42,6 +42,7 @@ We use a simple `.htaccess` to authenticate users with a simple username and pas
 `.htaccess`:
 
 ```
+DirectoryIndex index.php
 <Files "index.php">
 AuthName "GB3VR"
 AuthType Basic
@@ -51,6 +52,15 @@ require valid-user
 ```
 
 The `.htpasswd` file is created with the `htpasswd` command, e.g. `htpasswd -c .htpasswd gb3bp`.
+
+Depending on your Apache configuration, you may also require the following in your site configuration, `/etc/apache2/sites-enabled/000-default.conf` (within the VirtualHost definition). This appears to be needed on ASL3, but not on hamvoip:
+
+```
+<Directory /var/www/html>
+    AllowOverride All
+    Require all granted
+</Directory>
+```
 
 ## Configuration
 
